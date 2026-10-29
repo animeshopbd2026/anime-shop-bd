@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090711">
+<title>Anime Shop BD | Anime Streetwear & Merch</title>
+<style>
+:root{--bg:#090711;--panel:#141120;--panel2:#1b162b;--purple:#8b35ff;--purple2:#5b16d8;--text:#f7f3ff;--muted:#b8aecb;--line:#34244f;--pink:#e6a8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#1a0d32 0,#090711 48%);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#090711ed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.top{display:flex;align-items:center;gap:18px;padding:14px 0}.logo{font-weight:950;font-size:1.25rem;line-height:1;color:white;text-decoration:none;min-width:165px}.logo span{color:var(--purple)}.search{flex:1;display:flex}.search input{width:100%;min-width:0;background:#151020;border:1px solid var(--line);border-radius:10px 0 0 10px;padding:12px;color:white;outline:none}.search button,.primary{background:linear-gradient(120deg,var(--purple),var(--purple2));color:white;border:0;border-radius:0 10px 10px 0;padding:0 16px;font-weight:750}.cartbtn{border:1px solid var(--line);background:var(--panel);color:white;border-radius:10px;padding:11px 14px;white-space:nowrap}nav{display:flex;gap:22px;overflow:auto;padding:0 0 13px;white-space:nowrap}nav a{color:#ded5ee;text-decoration:none;font-size:.9rem}nav a:hover{color:var(--pink)}
+.hero{padding:46px 0 28px}.hero-box{position:relative;overflow:hidden;border:1px solid #51218b;border-radius:22px;padding:clamp(25px,5vw,60px);background:linear-gradient(105deg,#130a24 0%,#21103f 55%,#090711 100%)}.hero-box:after{content:"✦";position:absolute;right:7%;top:-38px;font-size:19rem;line-height:1;color:#7c29ff22;pointer-events:none}.eyebrow{color:var(--pink);text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;font-weight:800}.hero h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:.98;max-width:700px;margin:12px 0}.hero h1 span{color:#a65bff}.hero p{color:var(--muted);max-width:540px;line-height:1.7}.primary{border-radius:10px;padding:12px 20px;margin-top:10px}.section{padding:20px 0 24px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:16px}.section h2{font-size:1.4rem;margin:0}.section-head p{margin:4px 0 0;color:var(--muted);font-size:.9rem}.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.cat{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 8px;text-align:center;color:white}.cat .icon{display:block;font-size:1.7rem;margin-bottom:5px}.cat:hover,.cat.active{border-color:var(--purple);background:#241239}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{overflow:hidden;background:linear-gradient(160deg,#191526,#0f0d18);border:1px solid var(--line);border-radius:15px}.art{height:165px;display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,#4a1e76,#171222 60%,#100d18);font-size:4rem;position:relative}.art small{position:absolute;bottom:10px;left:10px;color:#d9c8ff;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}.cardbody{padding:13px}.card h3{font-size:.98rem;margin:0 0 7px}.desc{color:var(--muted);font-size:.8rem;min-height:35px}.price{font-weight:850;margin:10px 0}.price small{font-weight:400;color:var(--muted);text-decoration:line-through;margin-left:6px}.add{width:100%;border:0;border-radius:9px;padding:10px;background:var(--purple2);color:white;font-weight:750}.add:hover{background:var(--purple)}.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:25px 0}.benefit{background:var(--panel);border:1px solid var(--line);padding:17px;border-radius:13px}.benefit strong{display:block}.benefit span{color:var(--muted);font-size:.8rem}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.notice{background:#281d3b;border:1px solid #5c3884;padding:12px 14px;border-radius:10px;color:#e8dcff;font-size:.88rem;margin:15px 0}
+.overlay{position:fixed;inset:0;background:#0009;z-index:10;display:none}.overlay.open{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(420px,100%);background:#100c19;border-left:1px solid var(--line);padding:22px;overflow:auto}.drawer-head{display:flex;justify-content:space-between;align-items:center}.close{background:transparent;color:white;border:1px solid var(--line);border-radius:8px;padding:7px 10px}.cartline{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cartline small{display:block;color:var(--muted)}.qty{display:flex;align-items:center;gap:8px}.qty button{background:var(--panel2);border:1px solid var(--line);color:white;border-radius:6px;padding:3px 8px}.total{font-size:1.2rem;font-weight:850;display:flex;justify-content:space-between;padding:18px 0}.checkout{width:100%;border:0;border-radius:10px;padding:13px;background:#20b85a;color:white;font-weight:850}.empty{color:var(--muted);padding:30px 0;text-align:center}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(3,1fr)}.benefits{grid-template-columns:repeat(2,1fr)}nav{gap:16px}.logo{min-width:auto}.top{gap:10px}.cartbtn{padding:10px}.art{height:145px}}
+@media(max-width:480px){.top{flex-wrap:wrap}.logo{flex:1}.search{order:3;flex-basis:100%}.hero{padding-top:22px}.hero-box{border-radius:15px}.grid{gap:9px}.art{height:125px;font-size:3.3rem}.cardbody{padding:10px}.card h3{font-size:.9rem}.desc{font-size:.75rem}.categories{gap:7px}.cat{padding:12px 4px;font-size:.82rem}.benefits{gap:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#" aria-label="Anime Shop BD home">アニメ <span>SHOP BD</span></a>
+      <form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="Search anime products..." aria-label="পণ্য খুঁজুন"><button aria-label="Search">⌕</button></form>
+      <button class="cartbtn" id="openCart">🛒 Cart (<span id="cartCount">0</span>)</button>
+    </div>
+    <nav aria-label="Product categories">
+      <a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Shop all</a><a href="#new">New arrivals</a><a href="#footer">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="home">
+  <section class="hero wrap"><div class="hero-box">
+    <div class="eyebrow">Welcome to your anime universe</div>
+    <h1>ANIME <span>SHOP BD</span></h1>
+    <p>তোমার পছন্দের anime-inspired streetwear ও merchandise এক জায়গায়। নতুন কালেকশন খুঁজে নাও, কার্টে যোগ করো, আর অর্ডার শুরু করো!</p>
+    <a href="#products"><button class="primary">Shop products →</button></a>
+  </div></section>
+  <section class="section wrap" id="categories">
+    <div class="section-head"><div><h2>Shop by category</h2><p>তোমার পছন্দের ক্যাটাগরি বেছে নাও</p></div></div>
+    <div class="categories" id="categoryList"></div>
+  </section>
+  <section class="section wrap" id="products">
+    <div class="section-head"><div><h2 id="productHeading">Featured products</h2><p>ডেমো পণ্য—নিজের আসল ছবি ও দাম দিয়ে বদলে নিও</p></div></div>
+    <div class="grid" id="productGrid"></div>
+    <div class="notice">এটি একটি starter demo। পণ্যের ছবি, দাম, WhatsApp নম্বর এবং পেমেন্ট ব্যবস্থা চালুর আগে নিজের তথ্য বসাতে হবে।</div>
+  </section>
+  <section class="section wrap" id="new">
+    <div class="section-head"><div><h2>Why shop with us?</h2><p>তোমার ব্র্যান্ডের জন্য দরকারি সুবিধা</p></div></div>
+    <div class="benefits">
+      <div class="benefit">🚚 <strong>Delivery across BD</strong><span>ডেলিভারি চার্জ ও সময় পরে যোগ করো</span></div>
+      <div class="benefit">🔒 <strong>Secure checkout</strong><span>লাইভ পেমেন্ট গেটওয়ে সেটআপ প্রয়োজন</span></div>
+      <div class="benefit">💜 <strong>Anime-inspired style</strong><span>নিজস্ব ডিজাইন ও কালেকশন</span></div>
+      <div class="benefit">💬 <strong>Customer support</strong><span>WhatsApp অর্ডার/সহায়তা</span></div>
+    </div>
+  </section>
+</main>
+<footer id="footer"><div class="wrap foot"><div><a class="logo" href="#">アニメ <span>SHOP BD</span></a><p>Anime merch • Streetwear • More</p></div><div><strong>Customer care</strong><p>Shipping policy · Return policy · Contact</p><p>© <span id="year"></span> Anime Shop BD</p></div></div></footer>
+<div class="overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="Shopping cart"><div class="drawer">
+  <div class="drawer-head"><h2>Your cart</h2><button class="close" id="closeCart">Close ✕</button></div>
+  <div id="cartItems"></div><div class="total"><span>Total</span><span id="cartTotal">৳ 0</span></div>
+  <button class="checkout" id="checkout">Order via WhatsApp</button>
+  <p class="desc">WhatsApp অর্ডারের জন্য নিচের কোডে নিজের নম্বর বসাতে হবে। অনলাইন পেমেন্ট এখনও যুক্ত করা হয়নি।</p>
+</div></div>
+<script>
+const WHATSAPP_NUMBER = "8801XXXXXXXXX"; // TODO: নিজের WhatsApp নম্বর দিন, যেমন 88017XXXXXXXX
+const categories = [
+ {name:"Hoodies",icon:"🧥"},{name:"T-Shirts",icon:"👕"},{name:"Jerseys",icon:"🏁"},
+ {name:"Posters",icon:"🖼️"},{name:"Stickers",icon:"✨"},{name:"Caps",icon:"🧢"},
+ {name:"Keychains",icon:"🔑"},{name:"Phone Cases",icon:"📱"},{name:"Mugs",icon:"☕"}
+];
+const products = [
+ {id:1,name:"Shadow Anime Hoodie",cat:"Hoodies",price:1850,emoji:"🧥",desc:"Black streetwear · S–XXL"},
+ {id:2,name:"Anime Graphic T-Shirt",cat:"T-Shirts",price:1050,emoji:"👕",desc:"Oversized fit · S–XXL"},
+ {id:3,name:"Anime Club Jersey",cat:"Jerseys",price:1450,emoji:"🏁",desc:"Sporty fit · S–XXL"},
+ {id:4,name:"Dark Fantasy Poster",cat:"Posters",price:350,emoji:"🖼️",desc:"Wall art · A4 size"},
+ {id:5,name:"Anime Sticker Pack",cat:"Stickers",price:180,emoji:"✨",desc:"Pack of 6 stickers"},
+ {id:6,name:"Streetwear Cap",cat:"Caps",price:750,emoji:"🧢",desc:"Adjustable fit"},
+ {id:7,name:"Anime Keychain",cat:"Keychains",price:450,emoji:"🔑",desc:"Collectible accessory"},
+ {id:8,name:"Anime Phone Case",cat:"Phone Cases",price:650,emoji:"📱",desc:"Choose your phone model"},
+ {id:9,name:"Anime Art Mug",cat:"Mugs",price:550,emoji:"☕",desc:"Ceramic mug"}
+];
+let cart = {};
+let activeCategory = "All";
+const money = n => "৳ " + n.toLocaleString("en-BD");
+function renderCategories(){
+ const list=document.getElementById("categoryList");
+ list.innerHTML = `<button class="cat ${activeCategory==="All"?"active":""}" data-cat="All"><span class="icon">✦</span>All items</button>` +
+ categories.map(c=>`<button class="cat ${activeCategory===c.name?"active":""}" data-cat="${c.name}"><span class="icon">${c.icon}</span>${c.name}</button>`).join("");
+ list.querySelectorAll("[data-cat]").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.cat;renderCategories();renderProducts(document.getElementById("searchInput").value)}));
+}
+function renderProducts(query=""){
+ const q=query.trim().toLowerCase();
+ const shown=products.filter(p=>(activeCategory==="All"||p.cat===activeCategory)&&(`${p.name} ${p.cat} ${p.desc}`).toLowerCase().includes(q));
+ document.getElementById("productHeading").textContent=activeCategory==="All"?"Featured products":activeCategory;
+ const grid=document.getElementById("productGrid");
+ grid.innerHTML=shown.length?shown.map(p=>`<article class="card"><div class="art" aria-label="${p.cat} placeholder art">${p.emoji}<small>${p.cat}</small></div><div class="cardbody"><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">${money(p.price)}</div><button class="add" data-add="${p.id}">＋ Add to Cart</button></div></article>`).join(""):`<p>No products found. অন্য শব্দ দিয়ে খুঁজে দেখো।</p>`;
+ grid.querySelectorAll("[data-add]").forEach(b=>b.addEventListener("click",()=>{const id=Number(b.dataset.add);cart[id]=(cart[id]||0)+1;renderCart();b.textContent="✓ Added";setTimeout(()=>b.textContent="＋ Add to Cart",800)}));
+}
+function renderCart(){
+ const count=Object.values(cart).reduce((a,b)=>a+b,0);
+ document.getElementById("cartCount").textContent=count;
+ const entries=Object.entries(cart).filter(([id,q])=>q>0);
+ document.getElementById("cartItems").innerHTML=entries.length?entries.map(([id,q])=>{const p=products.find(x=>x.id===Number(id));return `<div class="cartline"><div><strong>${p.name}</strong><small>${money(p.price)} each</small></div><div class="qty"><button data-minus="${id}" aria-label="Decrease">−</button><span>${q}</span><button data-plus="${id}" aria-label="Increase">+</button></div></div>`}).join(""):`<div class="empty">তোমার কার্ট এখন খালি।<br>পছন্দের পণ্য যোগ করো!</div>`;
+ const total=entries.reduce((sum,[id,q])=>sum+products.find(p=>p.id===Number(id)).price*q,0);
+ document.getElementById("cartTotal").textContent=money(total);
+ document.querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>{const id=b.dataset.minus;cart[id]--;if(cart[id]<=0)delete cart[id];renderCart()});
+ document.querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>{const id=b.dataset.plus;cart[id]++;renderCart()});
+}
+document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();activeCategory="All";renderCategories();renderProducts(document.getElementById("searchInput").value);document.getElementById("products").scrollIntoView()});
+document.getElementById("searchInput").addEventListener("input",e=>renderProducts(e.target.value));
+const overlay=document.getElementById("cartOverlay");
+document.getElementById("openCart").onclick=()=>overlay.classList.add("open");
+document.getElementById("closeCart").onclick=()=>overlay.classList.remove("open");
+overlay.addEventListener("click",e=>{if(e.target===overlay)overlay.classList.remove("open")});
+document.getElementById("checkout").onclick=()=>{
+ const entries=Object.entries(cart).filter(([id,q])=>q>0);
+ if(!entries.length){alert("আগে কার্টে পণ্য যোগ করো।");return}
+ if(WHATSAPP_NUMBER.includes("X")){alert("WhatsApp অর্ডার চালু করতে index.html ফাইলে WHATSAPP_NUMBER-এ নিজের নম্বর বসাও।");return}
+ const lines=entries.map(([id,q])=>{const p=products.find(x=>x.id===Number(id));return `• ${p.name} x ${q} = ${money(p.price*q)}`});
+ const total=entries.reduce((s,[id,q])=>s+products.find(p=>p.id===Number(id)).price*q,0);
+ const msg=`Assalamu alaikum, I want to order from Anime Shop BD:\\n${lines.join("\\n")}\\nTotal: ${money(total)}\\nName:\\nAddress:\\nPhone:`;
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank","noopener");
+};
+document.getElementById("year").textContent=new Date().getFullYear();
+renderCategories();renderProducts();renderCart();
+</script>
+</body></html>
